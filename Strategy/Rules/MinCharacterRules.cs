@@ -15,7 +15,7 @@ namespace Strategy.Rules
                 if (item is string && item != null)
                 {
                     string s = item as string;
-                    results.Add(s.Length > MIN_CHARACTER_LENGTH);
+                    results.Add(s.Length >= MIN_CHARACTER_LENGTH);
                 }
             }
             return results.All(x => x == true) && results.Any();
